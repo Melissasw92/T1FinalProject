@@ -1,0 +1,87 @@
+/* style.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-image: linear-gradient(180deg, #7400B8, #5E60CE, #48BFE3, #80FFDB);
+  padding: 20px;
+  border: #7400B8 solid;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+}
+
+.hero img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.hero-text {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.hero p {
+  color: #80FFDB;
+  font-family: Regular 400;
+  font-size: 48px;
+  text-shadow: 2px 2px 4px #000000;
+  align-items: center;
+}
+
+.about-me {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.about-me section {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  animation: mymove 5s;
+  animation-fill-mode: backwards;
+}
+
+nav a {
+  color: #6930C3;
+  font-size: large;
+  text-shadow: 2px 2px 5px #5E60CE;
+  font-family: "SemiBold 600";
+  text-decoration: none;
+}
+
+a:hover:not(.active) {
+  background-color: #4EA8DE;
+}
+
+#active {
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 300px;}
+}
+
+.about-me-Melissa {
+  background-color: rgba(72, 191, 227 0.1);
+}
