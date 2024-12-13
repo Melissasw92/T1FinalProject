@@ -7,23 +7,37 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  background-image: linear-gradient(90deg, #7400B8, #5E60CE, #48BFE3, #80FFDB);
+
 }
 
 .container {
-  flex: 1; /* Flex-grow to take up available space */
+  flex: 1;
+  /* Flex-grow to take up available space */
+  text-align: center;
+  /* Center elements within the container */
+  padding: 20px;
 }
 
 footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  /* Adjust spacing between buttons */
   align-items: center;
-  /* Additional styles for the footer as needed */
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  /* Add padding to footer */
 }
 
 header {
   background-image: linear-gradient(180deg, #7400B8, #5E60CE, #48BFE3, #80FFDB);
   padding: 20px;
   border: #7400B8 solid;
+  
 }
 
 .hero {
@@ -71,8 +85,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  animation: mymove 5s;
-  animation-fill-mode: backwards;
+  animation: none;
+
 }
 
 nav a {
@@ -91,10 +105,6 @@ a:hover:not(.active) {
   animation-timing-function: ease-in-out;
 }
 
-@keyframes mymove {
-  from {left: 0px;}
-  to {left: 300px;}
-}
 
 
 
@@ -110,6 +120,7 @@ a:hover:not(.active) {
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  margin: 10px;
 }
 
 .btn-26::before,
@@ -137,4 +148,81 @@ a:hover:not(.active) {
 .btn-26:hover::before,
 .btn-26:hover::after {
   transform: rotate(45deg) scale(0);
+}
+
+
+
+input[type=text] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: whitesmoke;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+
+}
+
+input[type=text]:focus {
+  border: 3px solid #555;
+  background-color: #72EFDD;
+}
+
+label {
+  text-align: center;
+  font-size: 45px;
+  margin: 50px;
+}
+
+#meme-container {
+  /* Style the meme container as needed */
+  text-align: center;
+  width: 400px;
+  /* Adjust the width as needed */
+  margin: 0 auto;
+  /* Center the container */
+  z-index: 1;
+
+}
+
+.meme-image {
+  width: 300px;
+  /* Adjust image width as desired */
+  height: auto;
+  /* Maintain aspect ratio */
+  margin: 10px;
+  align-items: center;
+  margin: 10px 0;
+
+}
+
+.meme-caption {
+  text-align: center;
+  /* Center the caption */
+  margin-bottom: 20px;
+  /* Add bottom margin for spacing */
+}
+
+.image-container {
+  border: 2px solid black; /* Add a border */
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); /* Add a shadow */
+  position: relative; /* Position the image and caption */
+}
+
+.image-container img {
+  display: block;
+  margin: 0 auto; /* Center the image */
+}
+
+.image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white;
+  padding: 10px;
 }

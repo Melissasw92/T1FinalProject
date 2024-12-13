@@ -32,6 +32,76 @@ async function fetchJoke() {
 
 fetchJoke();
 
+const rickRollButton = document.querySelector('.btn-26');
+
+rickRollButton.addEventListener('click', () => {
+  alert('Loading...'); // Display a loading message
+  setTimeout(() => {
+    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
+  }, 2000); // Delay the redirect for 2 seconds
+});
+
+
+
+async function fetchRandomMeme() {
+  try {
+    const response = await fetch('https://api.imgflip.com/get_memes');
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const data = await response.json();
+
+    const randomMemeIndex = Math.floor(Math.random() * data.data.memes.length);
+    const randomMeme = data.data.memes[randomMemeIndex];
+
+    const memeUrl = randomMeme.url;
+    const memeCaption = randomMeme.caption; // Access caption property
+
+    const memeContainer = document.getElementById('meme-container');
+
+    // Clear the container before adding the new meme
+    memeContainer.innerHTML = '';
+
+    const memeDiv = document.createElement('div');
+    const memeImage = document.createElement('img');
+    memeImage.classList.add('meme-image');
+    memeImage.src = memeUrl;
+    memeImage.alt = "Random Meme";
+    const memeText = document.createElement('p');
+    memeText.textContent = memeCaption;
+
+    memeDiv.appendChild(memeImage);
+    memeDiv.appendChild(memeText);
+
+    memeContainer.appendChild(memeDiv);
+
+  } catch (error) {
+    console.error('Error fetching meme:', error);
+    memeContainer.textContent = 'Error fetching meme. Please try again later.';
+  }
+}
+
+const memeInput = document.getElementById('memeInput');
+
+memeInput.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    fetchRandomMeme();
+  }
+});
+
+const specificButton = document.getElementById('mySpecificButton');
+
+specificButton.addEventListener('click', () => {
+  alert('JUST KIDDING YOU JUST GET A MEME');
+  fetchRandomMeme();
+});
+
+var pix = document.getElementsByClassName("pixel");
+
+for (var i = 0; i < pix.length; i++) {
+  pix[i].style.animationDelay = Math.ceil(Math.random()*5000)+"ms";
+}
+
 
 
 
