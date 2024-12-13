@@ -4,6 +4,20 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container {
+  flex: 1; /* Flex-grow to take up available space */
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Additional styles for the footer as needed */
 }
 
 header {
@@ -70,7 +84,7 @@ nav a {
 }
 
 a:hover:not(.active) {
-  background-color: #4EA8DE;
+  background-color: rgba(78, 168, 222, 0.4);
 }
 
 #active {
@@ -82,6 +96,45 @@ a:hover:not(.active) {
   to {left: 300px;}
 }
 
-.about-me-Melissa {
-  background-color: rgba(72, 191, 227 0.1);
+
+
+.btn-26 {
+  background-color: #7400B8;
+  color: #80FFDB;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-26::before,
+.btn-26::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(78, 168, 222, 0.4);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Initial X shape */
+.btn-26::before {
+  transform: rotate(45deg);
+}
+
+.btn-26::after {
+  transform: rotate(-45deg);
+}
+
+/* Hover state: X rotates and shrinks */
+.btn-26:hover::before,
+.btn-26:hover::after {
+  transform: rotate(45deg) scale(0);
 }
