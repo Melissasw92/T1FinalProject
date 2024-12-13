@@ -30,7 +30,7 @@ footer {
   width: 100%;
   margin: auto;
   padding: 10px;
-  /* Add padding to footer */
+  
 }
 
 header {
@@ -225,4 +225,8 @@ label {
   background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
   color: white;
   padding: 10px;
+}
+
+#kronk {
+  align-items: center;
 }

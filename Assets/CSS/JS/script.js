@@ -96,12 +96,13 @@ specificButton.addEventListener('click', () => {
   fetchRandomMeme();
 });
 
-var pix = document.getElementsByClassName("pixel");
-
-for (var i = 0; i < pix.length; i++) {
-  pix[i].style.animationDelay = Math.ceil(Math.random()*5000)+"ms";
-}
 
 
+// window.addEventListener('DOMContentLoaded', () => {
+//   const kronkButton = document.getElementById('kronk');
+//   kronkButton.addEventListener('click', () => {
+//     alert("We've been trying to reach you about your car's extended warranty...");
+//   });
+// });
 
 
