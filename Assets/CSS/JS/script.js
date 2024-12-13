@@ -98,11 +98,5 @@ specificButton.addEventListener('click', () => {
 
 
 
-// window.addEventListener('DOMContentLoaded', () => {
-//   const kronkButton = document.getElementById('kronk');
-//   kronkButton.addEventListener('click', () => {
-//     alert("We've been trying to reach you about your car's extended warranty...");
-//   });
-// });
 
 
